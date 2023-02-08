@@ -58,7 +58,10 @@ int main()
 
 int main()
 {
-    int a = 10, b = 20, c = 30;
+    // int a = 10, b = 20, c = 30;
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
     int largest = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
     printf("Largest number is %d", largest);
     return 0;
