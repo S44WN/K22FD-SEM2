@@ -67,17 +67,90 @@ int largestOfThree()
 
 // write code exapmles for all the above topics
 
-int ifElseStuff()
+int ifElse()
 {
-    int a = 10;
-
+    int a = 11;
     if (a == 10) // if (a == 10) is a condition
     {
         printf("a is equal to 10"); // if the condition is true then this statement will be executed
     }
-    else // if the condition is false then this statement will be executed
+    else
     {
         printf("a is not equal to 10");
+    }
+    return 0;
+}
+
+int nestedIfElse()
+{
+    int a = 10;
+    if (a == 10)
+    {
+        if (a > 5)
+        {
+            printf("a is greater than 5");
+        }
+        else
+        {
+            printf("a is not greater than 5");
+        }
+    }
+    else
+    {
+        printf("a is not equal to 10");
+    }
+    return 0;
+}
+
+int switchStuff()
+{
+    int a;
+    scanf("%d", &a);
+    switch (a)
+    {
+    case 10:
+        printf("a is equal to 10");
+        break;
+    case 20:
+        printf("a is equal to 20");
+        break;
+    case 30:
+        printf("a is equal to 30");
+        break;
+    default:
+        printf("a is not equal to 10, 20 or 30");
+        break;
+    }
+    return 0;
+}
+
+// write a program to find the largest of three number using if else and nested if else
+
+int greatesetUsigIfElse()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    if (a > b)
+    {
+        if (a > c)
+        {
+            printf("a is greater");
+        }
+        else
+        {
+            printf("c is greater");
+        }
+    }
+    else
+    {
+        if (b > c)
+        {
+            printf("b is greater");
+        }
+        else
+        {
+            printf("c is greater");
+        }
     }
     return 0;
 }
@@ -86,6 +159,11 @@ int main()
 {
     // formatSpecifier();
     // floatDoubleDifference();
-    largestOfThree();
+    // ifElse();
+    // nestedIfElse();
+    // switchStuff();
+    // largestOfThree();
+    greatesetUsigIfElse();
+
     return 0;
 }
