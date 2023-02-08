@@ -13,38 +13,31 @@
 
 #include <stdio.h>
 
-int formatSpecifier()
-{
-    int a = 10;
-    float b = 10.5;
-    char c = 'A';
-    char d[] = "Hello World";
-    printf("Integer value is %d and %i and %u and %o and %x and %X and %p and %c and %s", a, a, a, a, a, a, &a, c, d); // %d, %i, %u, %o, %x, %X, %p, %c, %s
-    printf(" and %f and %e and %E and %g", b, b, b, b);                                                                // %f, %e, %E, %g
-    return 0;
-}
+// int formatSpecifier()
+// {
+//     int a = 10;
+//     float b = 10.5;
+//     char c = 'A';
+//     char d[] = "Hello World";
+//     printf("Integer value is %d and %i and %u and %o and %x and %X and %p and %c and %s", a, a, a, a, a, a, &a, c, d); // %d, %i, %u, %o, %x, %X, %p, %c, %s
+//     printf(" and %f and %e and %E and %g", b, b, b, b);                                                                // %f, %e, %E, %g
+//     return 0;
+// }
 
 // Output:
 // Integer value is 10 and 10 and 10 and 12 and a and A and 0x7ffccf0c9a0c and A and Hello World and 10.500000 and 1.050000e+01 and 1.050000E+01 and 10.5
 
 // float and double are two different data types in C. The float data type is used to store the single-precision floating-point values, and the double data type is used to store the double-precision floating-point values. The float data type is used to store the 32-bit floating-point values, and the double data type is used to store the 64-bit floating-point values. The float data type is used to store the 32-bit floating-point values, and the double data type is used to store the 64-bit floating-point values.
-int floatDoubleDifference()
-{
-    float a = 10.512345678;
-    double b = 10.5123456789023456789;
-    printf("Float value is %0.8f and Double value is %0.12lf", a, b);
-    return 0;
-}
+// int floatDoubleDifference()
+// {
+//     float a = 10.512345678;
+//     double b = 10.5123456789023456789;
+//     printf("Float value is %0.8f and Double value is %0.12lf", a, b);
+//     return 0;
+// }
 
 // Output:
 // Float value is 10.51234579 and Double value is 10.512345678902
-
-int main()
-{
-    formatSpecifier();
-    floatDoubleDifference();
-    return 0;
-}
 
 // find the largest of three number using ternary operator
 // whta is ternary operator in c
@@ -54,9 +47,7 @@ int main()
 // It is used to evaluate a condition and return a value based on the result of the condition.
 // Syntax: (condition) ? expression1 : expression2;
 
-#include <stdio.h>
-
-int main()
+int largestOfThree()
 {
     // int a = 10, b = 20, c = 30;
     int a, b, c;
@@ -64,5 +55,37 @@ int main()
 
     int largest = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
     printf("Largest number is %d", largest);
+    return 0;
+}
+
+// descision making in c
+// if else in c
+// nested if else in c
+// switch case in c
+// loops in c
+// for loop in c
+
+// write code exapmles for all the above topics
+
+int ifElseStuff()
+{
+    int a = 10;
+
+    if (a == 10) // if (a == 10) is a condition
+    {
+        printf("a is equal to 10"); // if the condition is true then this statement will be executed
+    }
+    else // if the condition is false then this statement will be executed
+    {
+        printf("a is not equal to 10");
+    }
+    return 0;
+}
+
+int main()
+{
+    // formatSpecifier();
+    // floatDoubleDifference();
+    largestOfThree();
     return 0;
 }
