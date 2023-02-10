@@ -155,6 +155,50 @@ int greatesetUsigIfElse()
     return 0;
 }
 
+int evenOrOdd()
+{
+    int a;
+    scanf("%d", &a);
+    if (a % 2 == 0)
+    {
+        printf("a is even");
+    }
+    else
+    {
+        printf("a is odd");
+    }
+    return 0;
+}
+
+int leapYear()
+{
+    int year;
+    scanf("%d", &year);
+    if (year % 4 == 0)
+    {
+        if (year % 100 == 0)
+        {
+            if (year % 400 == 0)
+            {
+                printf("Leap year");
+            }
+            else
+            {
+                printf("Not a leap year");
+            }
+        }
+        else
+        {
+            printf("Leap year");
+        }
+    }
+    else
+    {
+        printf("Not a leap year");
+    }
+    return 0;
+}
+
 int main()
 {
     // formatSpecifier();
@@ -166,4 +210,69 @@ int main()
     greatesetUsigIfElse();
 
     return 0;
+}
+
+// if else syntax
+
+// if (condition)
+// { // if the condition is true then this block will be executed
+//     // statements
+// }
+// else
+// { // if the condition is false then this block will be executed
+//     // statements
+// }
+
+// wap to show following condition using nested if else statement:
+// for male:
+// salary > 10000 then bonus should be 1000
+// salary <= 10000 and salary => 5000 then bonus should be 500
+// salary < 5000 then bonus should be 100
+
+// for female:
+// salary > 10000 then bonus should be 100
+// salary <= 10000 and salary => 5000 then bonus should be 50
+// salary < 5000 then bonus should be 10
+
+int salaryStuff()
+{
+    int salary;
+    printf("Enter your salary: ");
+    scanf("%d", &salary);
+
+    char g;
+    printf("Enter your gender (m/f): ");
+    scanf("%c", &g);
+
+    if (g == 'm')
+    {
+        if (salary > 10000)
+        {
+            printf("Bonus is 1000");
+        }
+        else if (salary <= 10000 && salary >= 5000)
+        {
+            printf("Bonus is 500");
+        }
+        else
+        {
+            printf("Bonus is 100");
+        }
+    }
+
+    else
+    {
+        if (salary > 10000)
+        {
+            printf("Bonus is 100");
+        }
+        else if (salary <= 10000 && salary >= 5000)
+        {
+            printf("Bonus is 50");
+        }
+        else
+        {
+            printf("Bonus is 10");
+        }
+    }
 }
