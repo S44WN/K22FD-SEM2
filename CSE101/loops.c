@@ -44,11 +44,49 @@ int forEachLoop()
     }
 };
 
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+
+int primeOrNot()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int flag = 0;
+
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+    {
+        printf("%d is a prime number", n);
+    }
+    else
+    {
+        printf("%d is not a prime number", n);
+    }
+}
+
 int main()
 {
-    whileLoop();
-    doWhileLoop();
-    forLoop();
-    forEachLoop();
+    // whileLoop();
+    // doWhileLoop();
+    // forLoop();
+    // forEachLoop();
+    printf("%d", factorial(5));
+    primeOrNot();
     return 0;
 }
