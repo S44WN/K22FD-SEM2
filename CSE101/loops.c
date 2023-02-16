@@ -144,6 +144,62 @@ int palindromeNum()
     }
 }
 
+int armstrongNum()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int temp = n;
+    int sum = 0;
+    while (n > 0)
+    {
+        int lastDigit = n % 10;
+        sum = sum + lastDigit * lastDigit * lastDigit;
+        n = n / 10;
+    }
+    if (temp == sum)
+    {
+        printf("The number is armstrong");
+    }
+    else
+    {
+        printf("The number is not armstrong");
+    }
+}
+
+// write a program to show to use of goto and continue statements
+int continueStatement()
+{
+    int a = 1;
+    while (a <= 10)
+    {
+        if (a == 5)
+        {
+            a++;
+            continue;
+        }
+        printf("%d ", a);
+        a++;
+    }
+}
+
+int gotoStatemnt()
+{
+    int a = 1;
+    while (a <= 10)
+    {
+        if (a == 5)
+        {
+            a++;
+            goto end;
+        }
+        printf("%d ", a);
+        a++;
+    }
+end:
+    printf("End of the program");
+}
+
 int main()
 {
     // whileLoop();
