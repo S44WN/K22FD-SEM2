@@ -316,9 +316,3 @@ int main()
 
     return 0;
 }
-
-// wap to get factorial
-
-int facto()
-{
-}
