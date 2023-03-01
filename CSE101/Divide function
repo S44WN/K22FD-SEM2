@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void adl(int, int); // prototype fun declare
+
+int main()
+{
+    int a, b, c;
+    printf("enter the data");
+    scanf("%d %d", &a, &b);
+    adl(a, b);
+}
+
+void adl(int a, int b)
+{
+    int c;
+    return (a + b);
+}

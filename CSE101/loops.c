@@ -316,3 +316,11 @@ int main()
 
     return 0;
 }
+
+int operatorstuff()
+{
+    int a = -1, b = 4, c = 1, d;
+    d = a++ && b++ && c++; // 0 && 1 && 1 = 0
+    printf("%d %d %d %d", a, b, c, d);
+    return 0;
+}
