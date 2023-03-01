@@ -1,17 +1,38 @@
+// #include <stdio.h>
+
+// float adl(float a, float b, float c)
+// {
+//     return (a + b + c);
+// }
+
+// int main()
+// {
+//     float a, b, c;
+//     printf("Enter the value of a: ");
+//     scanf("%f", &a);
+//     printf("Enter the value of b: ");
+//     scanf("%f", &b);
+//     printf("Enter the value of c: ");
+//     scanf("%f", &c);
+//     printf("The sum of a, b and c is: %f", adl(a, b, c));
+//     return 0;
+// }
+
+// // do the above program with different method
+// // #include <stdio.h>
+
 #include <stdio.h>
 
-void adl(int, int); // prototype fun declare
+void show();
 
 int main()
 {
-    int a, b, c;
-    printf("enter the data");
-    scanf("%d %d", &a, &b);
-    adl(a, b);
+    show();
+    prinf("Hello ");
 }
 
-void adl(int a, int b)
+void show()
 {
-    int c;
-    return (a + b);
+    printf("World");
+    main();
 }
