@@ -21,18 +21,48 @@
 // // do the above program with different method
 // // #include <stdio.h>
 
+// #include <stdio.h>
+
+// void show();
+
+// int main()
+// {
+//     show();
+//     prinf("Hello ");
+// }
+
+// void show()
+// {
+//     printf("World");
+//     main();
+// }
+
+// wap to take input from user and print the factorial of the number if negative number is entered then print the message "Invalid input". Use function to find the factorial.
+
 #include <stdio.h>
 
-void show();
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    return fact;
+}
 
 int main()
 {
-    show();
-    prinf("Hello ");
-}
-
-void show()
-{
-    printf("World");
-    main();
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n < 0)
+    {
+        printf("Invalid input");
+    }
+    else
+    {
+        printf("The factorial of %d is %d", n, factorial(n));
+    }
+    return 0;
 }
