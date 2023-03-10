@@ -22,7 +22,7 @@ int sumOfEven(int a)
     }
     else if (a % 2 == 0)
     {
-        return a + sumOfEven(a - 2);
+        return a + sumOfEven(a - 2); // 2 + 4 + 6 + 8 + 10 = 30
     }
 }
 
@@ -38,6 +38,6 @@ int main()
     int a;
     printf("Enter the number : ");
     scanf("%d", &a);
-    printf("Sum of even numbers : %d", sumOfEven(a));
+    printf("Sum of even numbers : %d \n", sumOfEven(a));
     return 0;
 }
