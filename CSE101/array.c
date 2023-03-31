@@ -245,6 +245,33 @@ int largestElementTwoDimArray()
     printf("%f ", largest);
 }
 
+// find sum of two matrices
+
+int sumOfTwoMatrices()
+{
+    float a[3][2] = {1, 2, 3, 4, 5, 6};
+    float b[3][2] = {1, 2, 3, 4, 5, 6};
+    int i, j;
+    float sum[3][2];
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            printf("%f ", sum[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     // declareArray();
@@ -262,6 +289,7 @@ int main()
     // twoDimArray();
     // sumOfTwoDimArray();
     // largestElementTwoDimArray();
+    sumOfTwoMatrices();
 
     return 0;
 }
