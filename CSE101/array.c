@@ -272,6 +272,29 @@ int sumOfTwoMatrices()
     }
 }
 
+// insertion in array
+
+int insertionInArray()
+{
+    int a[10] = {1, 2, 3, 4, 5};
+    int size = 5;
+    int index, element;
+    printf("Enter index and element: ");
+    scanf("%d %d", &index, &element);
+
+    for (int i = size - 1; i >= index; i--)
+    {
+        a[i + 1] = a[i];
+    }
+    a[index] = element;
+    size += 1;
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", a[i]);
+    }
+}
+
 int main()
 {
     // declareArray();
