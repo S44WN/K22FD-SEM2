@@ -317,6 +317,90 @@ int deletionInArray()
     }
 }
 
+// linear search in array
+
+int linearSearch()
+{
+    int a[10] = {1, 2, 3, 4, 5};
+    int size = 5;
+    int element;
+    printf("Enter element: ");
+    scanf("%d", &element);
+
+    for (int i = 0; i < size; i++)
+    {
+        if (a[i] == element)
+        {
+            printf("Element found at index %d", i);
+            break;
+        }
+    }
+}
+
+// linear search in character array
+
+int linearSearchChar()
+{
+    char a[10] = {'a', 'b', 'c', 'd', 'e'};
+    int size = 5;
+    char element;
+    printf("Enter element: ");
+    scanf("%c", &element);
+
+    for (int i = 0; i < size; i++)
+    {
+        if (a[i] == element)
+        {
+            printf("Element found at index %d", i);
+            break;
+        }
+    }
+}
+
+// binary search
+
+int binarysearch()
+{
+    float a[10], key;
+    int i;
+
+    printf("Enter the sorted data in an array : ");
+
+    for (i = 0; i < 10; i++)
+    {
+        scanf("%f", &a[i]);
+    }
+
+    printf("Enter the float to search : ");
+    sacnf("%f", &key);
+
+    int low = 0, high = 9, mid;
+
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+
+        if (key == a[mid])
+        {
+            printf("The float is found at position %d", mid + 1);
+            break;
+        }
+        else if (key < a[mid])
+        {
+            high = mid - 1;
+        }
+        else if (key > a[mid])
+        {
+            low = mid + 1;
+        }
+    }
+
+    if (low > high)
+    {
+        printf("The float is not found");
+    }
+}
+
 int main()
 {
     // declareArray();
@@ -334,7 +418,9 @@ int main()
     // twoDimArray();
     // sumOfTwoDimArray();
     // largestElementTwoDimArray();
-    sumOfTwoMatrices();
+    // sumOfTwoMatrices();
+    // insertionInArray();
+    // deletionInArray();
 
     return 0;
 }
