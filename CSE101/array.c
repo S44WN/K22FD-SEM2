@@ -401,6 +401,77 @@ int binarysearch()
     }
 }
 
+// binary search for character array
+
+int binarysearchChar()
+{
+    char a[10], key;
+    int i;
+
+    printf("Enter the sorted data in an array : ");
+
+    for (i = 0; i < 10; i++)
+    {
+        scanf("%c", &a[i]);
+    }
+
+    printf("Enter the character to search : ");
+    sacnf("%c", &key);
+
+    int low = 0, high = 9, mid;
+
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+
+        if (key == a[mid])
+        {
+            printf("The character is found at position %d", mid + 1);
+            break;
+        }
+        else if (key < a[mid])
+        {
+            high = mid - 1;
+        }
+        else if (key > a[mid])
+        {
+            low = mid + 1;
+        }
+    }
+
+    if (low > high)
+    {
+        printf("The character is not found");
+    }
+}
+
+// bubble sort
+
+int bubbleSort()
+{
+    int a[10] = {1, 2, 3, 4, 5};
+    int size = 5;
+    int temp;
+
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", a[i]);
+    }
+}
+
 int main()
 {
     // declareArray();
@@ -421,6 +492,10 @@ int main()
     // sumOfTwoMatrices();
     // insertionInArray();
     // deletionInArray();
+    // linearSearch();
+    // linearSearchChar();
+    // binarysearch();
+    // binarysearchChar();
 
     return 0;
 }
