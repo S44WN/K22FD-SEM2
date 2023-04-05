@@ -372,7 +372,7 @@ int binarysearch()
     }
 
     printf("Enter the float to search : ");
-    sacnf("%f", &key);
+    scanf("%f", &key);
 
     int low = 0, high = 9, mid;
 
@@ -416,7 +416,7 @@ int binarysearchChar()
     }
 
     printf("Enter the character to search : ");
-    sacnf("%c", &key);
+    scanf("%c", &key);
 
     int low = 0, high = 9, mid;
 
@@ -472,6 +472,65 @@ int bubbleSort()
     }
 }
 
+// bubble sort for character array and take input from user
+
+int bubbleSortChar()
+{
+    char a[10] = {'a', 'b', 'c', 'd', 'e'};
+    int size = 5;
+    char temp;
+
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%c ", a[i]);
+    }
+}
+
+// bubble sort for character array and take character array as input from user
+
+int bubbleSortCharArray()
+{
+    char a[10];
+    int size = 5;
+    char temp;
+
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%c", &a[i]);
+    }
+
+    for (int i = 0; i < size - 1; i++) // for number of passes (n-1) times
+    {
+        for (int j = 0; j < size - i - 1; j++) // for comparison in each pass
+        {
+            if (a[j] > a[j + 1]) // for swapping adjacent elements
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    for (int i = 0; i < size; i++) //
+    {
+        printf("%c ", a[i]);
+    }
+}
+
 int main()
 {
     // declareArray();
@@ -496,6 +555,7 @@ int main()
     // linearSearchChar();
     // binarysearch();
     // binarysearchChar();
+    bubbleSortCharArray();
 
     return 0;
 }
