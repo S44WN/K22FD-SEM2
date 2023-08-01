@@ -504,7 +504,7 @@ int bubbleSortChar()
 int bubbleSortCharArray()
 {
     char a[10];
-    int size = 5;
+    int size = 10;
     char temp;
 
     for (int i = 0; i < size; i++)
@@ -530,6 +530,8 @@ int bubbleSortCharArray()
         printf("%c ", a[i]);
     }
 }
+
+// no of passes in bubble sort of [8, 22, 7, 9, 31, 5, 13] is
 
 int main()
 {

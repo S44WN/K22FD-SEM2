@@ -21,24 +21,21 @@
 
 // write a program to enter 4 digit number and find sum of digits without using loops
 
-#include <stdio.h> 
+#include <stdio.h>
 
 int main(void)
 {
     int num; // number entered by user
     int sum; // sum of digits
     printf("Enter a 4 digit number: ");
-    scanf("%d", &num); // read number
-    sum = num % 10; // add last digit to sum
-    num = num / 10; // remove last digit from num
-    sum = sum + num % 10; // add second last digit to sum
-    num = num / 10; // remove second last digit from num
-    sum = sum + num % 10; // add third last digit to sum
-    num = num / 10; // remove third last digit from num
-    sum = sum + num % 10; // add fourth last digit to sum
+    scanf("%d", &num);                   // read number
+    sum = num % 10;                      // add last digit to sum
+    num = num / 10;                      // remove last digit from num
+    sum = sum + num % 10;                // add second last digit to sum
+    num = num / 10;                      // remove second last digit from num
+    sum = sum + num % 10;                // add third last digit to sum
+    num = num / 10;                      // remove third last digit from num
+    sum = sum + num % 10;                // add fourth last digit to sum
     printf("Sum of digits is: %d", sum); // print sum
-    return 0; // return 0 to indicate success
+    return 0;                            // return 0 to indicate success
 }
-
-
-
